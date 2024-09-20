@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('drum.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color:rgb(233, 222, 14);
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+#drum-kit {
+    border: 2px solid rgb(233, 222, 14);
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 50%;
+    max-width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+}
+
+.card {
+    border: 1px solid rgb(233, 222, 14);
+    width: 20%;
+    border-radius: 10px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: rgb(233, 222, 14);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: scale(1.10);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    color: transparent;
+
+}
+
+.red:hover {
+    background: radial-gradient(circle, #ff4d4d 0%, #ff0000 30%, #b30000 60%, #4d0000 100%);
+}
+
+.green:hover {
+    background: radial-gradient(circle, #66ff66 0%, #00cc00 30%, #009900 60%, #003300 100%);
+}
+
+.blue:hover {
+    background: radial-gradient(circle, #66b3ff 0%, #0066ff 30%, #0044cc 60%, #00264d 100%);
+}
+
+.purple:hover {
+    background: radial-gradient(circle, #e066ff 0%, #9933ff 30%, #6600cc 60%, #330066 100%);
+}
+
+.orange:hover {
+    background: radial-gradient(circle, #ffb366 0%, #ff8000 30%, #cc6600 60%, #663300 100%);
+}
+
+.yellow:hover {
+    background: radial-gradient(circle, #ffff99 0%, #ffcc00 30%, #cc9900 60%, #664d00 100%);
+}
+
+/* Add this at the end of your existing CSS */
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    #drum-kit {
+        width: 80%;
+        height: auto;
+    }
+
+    .card {
+        width: 45%; /* Adjust the width of the cards */
+        margin: 10px; /* Reduce margin for smaller screens */
+        font-size: 18px; /* Smaller font size */
+    }
+
+    h1 {
+        font-size: 32px; /* Smaller title for mobile */
+    }
+}
+
+@media (max-width: 1025px) {
+    .audio11 {
+        font-size: 15px;
+        /* font-weight: bold; */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .card {
+        width: 90%; /* Make cards take most of the width */
+    }
+
+    h1 {
+        font-size: 28px; /* Further reduce title size */
+    }
+}
+
